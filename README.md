@@ -16,6 +16,8 @@ npm install
 ```
 then, `cd bin` and `./www`.
 
+If it is the first time you run `./www` (or there's no `settings.js` file), `settings.js` will automatically be generated whose content is exactly the same as `settings-sample.js`. **Do not modify `settings-sample.js` file or your moaqee will be broken.**
+
 ## Settings
 
 Available to change the settings by editing `settings.js`.

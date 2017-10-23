@@ -3,10 +3,28 @@
 /**
  * Module dependencies.
  */
+var fs = require("fs");
+var debug = require('debug')('moaqee:server');
+
+var isSettingsExist = () => {
+  try {
+    fs.statSync("../settings.js");
+    return true;
+  } catch(err) {
+    if(err.code === "EN0ENT") return false;
+  }
+};
+
+if(!isSettingsExist()) {
+  console.log("No settings.js file found, copying settings-sample.js");
+  var data = fs.readFileSync("../settings-sample.js");
+  fs.writeFileSync("../settings.js", data);
+  debug("copying is done successfully");
+}
 
 var app = require('../app');
-var debug = require('debug')('moaqee:server');
 var http = require('http');
+
 var settings = require("../settings");
 
 /**
