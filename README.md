@@ -2,7 +2,7 @@
 
 ## A Lightweight Blog System
 
-** No external software required. ** 100% JavaScript.
+**No external software required.** 100% JavaScript.
 
 <img src="https://i.imgur.com/mMxIxE3.png">
 <img src="https://i.imgur.com/oyLauNb.png">
