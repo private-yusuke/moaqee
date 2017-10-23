@@ -16,14 +16,13 @@ npm install
 ```
 then, `cd bin` and `./www`.
 
-Some articles are already inserted to the Database, so if you want to remove them, you can delete Database.db and `./www` then your new Database is ready to use.
-
 ## Settings
 
 Available to change the settings by editing `settings.js`.
 
 | Property | Type | Description |
 |:--------:|:----:|:-----------:|
+| port | unsigned number | The port number for moaqee. |
 | blog.title | String | |
 | blog.desc | String | The description of your blog. |
 | blog.articlesPerPage | unsigned number | The amount of how many articles will be shown in 1 page. |
