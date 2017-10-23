@@ -16,6 +16,8 @@ npm install
 ```
 then, `cd bin` and `./www`.
 
+Some articles are already inserted to the Database, so if you want to remove them, you can delete Database.db and `/www` then your new Database is ready to use.
+
 ## Settings
 
 Available to change the settings by editing `settings.js`.
