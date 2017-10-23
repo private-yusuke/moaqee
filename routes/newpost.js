@@ -1,4 +1,5 @@
 var express = require('express');
+var debug = require("debug")("moaqee:server");
 var db = require("../db");
 var router = express.Router();
 
@@ -7,16 +8,15 @@ router.get('/', function(req, res, next) {
   res.render("newpost");
 });
 router.post("/", function(req, res, next) {
-  console.log(req.body.title);
-  console.log(req.body.content);
   if(!req.body.title || !req.body.content) {
     next(new Error("At least 1 argument is empty"));
     return;
   }
   db.insert({title: req.body.title, content: req.body.content}, (err, newDoc) => {
       if(err) next(err);
+      debug("Registered: " + req.body.title);
       res.render("newpost_done", {doc: newDoc});
-  })
+  });
 })
 
 module.exports = router;
