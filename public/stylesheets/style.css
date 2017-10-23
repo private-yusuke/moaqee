@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+header {
+  background-color: #d4e3fc;
+  padding: 10px;
+}
+
+#title {
+  font-size: 48px;
+  display: inline;
+}
+
+#desc {
+  font-size: 10px;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <pre><%= doc.content %></pre>
+    <p>Date: <%= doc.createdAt.toLocaleDateString("en-US") %> <%= doc.createdAt.toLocaleTimeString("ja-JP") %></p>
+    <a href="#" onclick="javascript:window.history.back(-1);return false;">Back</a>
+    <a href="../">Top</a>
+  </body>
+</html>

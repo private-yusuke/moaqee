@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= settings.blog.title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <p id="title"><%= settings.blog.title %></p> <p id="desc"><%= settings.blog.desc %></p>
+    </header>
+    <% docs.forEach((doc, index) => { %>
+      <p><a href="../articles/<%= doc._id %>"><%= doc.title %></a>: <%= doc.createdAt.toLocaleDateString("en-US") %> <%= doc.createdAt.toLocaleTimeString("ja-JP") %></p>
+    <% }); %>
+    <a href="../newpost">write a new post</a>
+    <p><%= count %> article(s), showing articles from <%= firstArticle %> to <%= lastArticle %></p>
+    <% if (page != 1) { %>
+      <a href="<%= page-1 %>">Back</a>
+    <% } else if (settings.blog.articlesPerPage*page < count) { %>
+      <a href="<%= page+1 %>">Next</a>
+    <% } %>
+  </body>
+</html>
