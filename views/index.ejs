@@ -15,7 +15,7 @@
     <p><%= count %> article(s), showing articles from <%= firstArticle %> to <%= lastArticle %></p>
     <% if (page != 1) { %>
       <a href="<%= page-1 %>">Back</a>
-    <% } else if (settings.blog.articlesPerPage*page < count) { %>
+    <% } if (settings.blog.articlesPerPage*page < count) { %>
       <a href="<%= page+1 %>">Next</a>
     <% } %>
   </body>
